@@ -1,0 +1,4 @@
+plugins:
+  gtiit_primary_email_enabled:
+    default: false
+    client: true

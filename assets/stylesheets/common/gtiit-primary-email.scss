@@ -1,0 +1,13 @@
+.gtiit-primary-email {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25em;
+  max-width: 100%;
+  font-size: var(--font-down-1);
+  color: var(--primary-medium);
+
+  &__address {
+    overflow-wrap: anywhere;
+    unicode-bidi: isolate;
+  }
+}

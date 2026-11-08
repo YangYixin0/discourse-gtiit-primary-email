@@ -1,0 +1,15 @@
+{
+  "extends": "discourse/tsconfig-plugin",
+  "include": ["assets/javascripts/**/*", "test/javascripts/**/*", "type-tests/**/*"],
+  "compilerOptions": {
+    "paths": {
+      "discourse/plugins/discourse-gtiit-primary-email/*": [
+        "./assets/javascripts/*",
+        "./assets/javascripts/*.gjs",
+        "./test/javascripts/*",
+        "./test/javascripts/*.gjs"
+      ]
+    }
+  },
+  "references": [{ "path": "../../frontend/discourse" }]
+}

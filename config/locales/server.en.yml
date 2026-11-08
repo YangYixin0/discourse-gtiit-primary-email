@@ -1,0 +1,3 @@
+en:
+  site_settings:
+    gtiit_primary_email_enabled: "Show primary email addresses on user cards, profiles and posts to authenticated members. Members cannot hide this field."

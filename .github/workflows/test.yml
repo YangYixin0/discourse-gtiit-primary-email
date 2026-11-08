@@ -1,0 +1,88 @@
+name: Plugin tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: plugin-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: discourse/discourse_test:release
+    timeout-minutes: 40
+    defaults:
+      run:
+        shell: bash
+        working-directory: discourse
+    env:
+      RAILS_ENV: test
+      LOAD_PLUGINS: "1"
+      PGUSER: discourse
+      PGPASSWORD: discourse
+      QUNIT_PARALLEL: "1"
+      DBUS_SESSION_BUS_ADDRESS: unix:path=/dev/null
+      PLAYWRIGHT_BROWSERS_PATH: /home/discourse/.cache/ms-playwright
+    steps:
+      - name: Check out exact production Discourse source
+        uses: actions/checkout@v4
+        with:
+          repository: discourse/discourse
+          ref: 444e62cc26e96c7da97f08fa45df219f03f60114
+          path: discourse
+          persist-credentials: false
+      - name: Check out plugin under test
+        uses: actions/checkout@v4
+        with:
+          path: discourse/plugins/discourse-gtiit-primary-email
+          persist-credentials: false
+      - name: Prepare container services
+        run: |
+          redis-server /etc/redis/redis.conf --daemonize yes --logfile ""
+          chown -R postgres /var/run/postgresql
+          sudo -E -u postgres script/start_test_db.rb
+          sudo -u postgres psql -c "CREATE ROLE discourse LOGIN SUPERUSER PASSWORD 'discourse';"
+      - name: Install pinned source dependencies in CI only
+        run: |
+          ln -s /var/www/discourse/vendor/bundle vendor/bundle
+          bundle config --local path vendor/bundle
+          bundle config --local deployment true
+          bundle config --local without development
+          bundle install --jobs 2
+          pnpm install --frozen-lockfile
+      - name: Prepare isolated test database and assets
+        run: |
+          bin/rake db:create db:migrate
+          bin/rake assets:precompile:asset_processor assets:precompile:pretty_text
+      - name: Run backend security and request tests
+        run: bin/rspec plugins/discourse-gtiit-primary-email/spec
+      - name: Run component tests in Chromium
+        if: ${{ !cancelled() }}
+        run: bin/qunit --standalone --target discourse-gtiit-primary-email
+      - name: Check plugin types
+        if: ${{ !cancelled() }}
+        run: pnpm exec tsc --build plugins/discourse-gtiit-primary-email/tsconfig.json
+      - name: Lint plugin and report formatting fixes
+        if: ${{ !cancelled() }}
+        run: |
+          bin/lint --fix plugins/discourse-gtiit-primary-email
+          git -C plugins/discourse-gtiit-primary-email diff --exit-code
+      - name: Save test logs and formatting patch
+        if: ${{ !cancelled() }}
+        run: git -C plugins/discourse-gtiit-primary-email diff > tmp/plugin-formatting.patch
+      - name: Upload diagnostics
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: plugin-test-diagnostics
+          path: |
+            discourse/log/test.log
+            discourse/tmp/plugin-formatting.patch
+          retention-days: 7
