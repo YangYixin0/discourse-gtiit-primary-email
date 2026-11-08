@@ -1,35 +1,46 @@
 # Validation status
 
-## Completed
+## Passed in isolated GitHub CI
 
-- Source checkout verified at 444e62cc26e96c7da97f08fa45df219f03f60114.
-- Inspected primary email association, serializers, Guardian permissions, API auth
-  environment flags, TopicView preloading and Horizon-compatible core outlets.
-- Confirmed original user-card/profile/post components are preserved by additive outlets.
-- Plugin model field declarations and tracked post field registration included.
-- Basic file/content checks and `git diff --check` completed.
+- Tested plugin commit: `9dd76b2879a04358d670efd7b1f06d9f73625e56`.
+- Discourse source: `444e62cc26e96c7da97f08fa45df219f03f60114`.
+- Successful run: https://github.com/YangYixin0/discourse-gtiit-primary-email/actions/runs/42508812463
+- Backend: **17 examples, 0 failures**.
+- Chromium QUnit component tests: passed (escaped text and withheld-field display).
+- TypeScript build including plugin model field type assertions: passed.
+- Ruby syntax_tree/RuboCop, JS/TS ESLint/Prettier and SCSS Stylelint: passed.
+- CI formatter made no changes to the tested commit.
+- Source inspection: primary email association, API auth flags, Guardian permissions,
+  topic-view bulk preloading and the three core display outlets.
 
-## Not passed / not run
+The tests cover member/anonymous requests, valid API and User API keys, invalid API
+keys, private-topic denial, profile visibility, account eligibility, disabled setting,
+secondary-email exclusion and updated primary email serialization. This is focused
+plugin validation, not a complete Discourse regression suite or external audit.
 
-- Required `bin/lint --fix` attempted: exits 127 because Ruby is not installed.
-- GitHub CI now runs on disposable hosted runners; no host dependencies installed.
-- Run 42508018624: QUnit component tests and plugin/core type build passed.
-- Backend: 17 examples, 3 failures due to a private Guardian method call. Fixed
-  locally using public interfaces; a new run must confirm the fix.
-- Ruby/JS/CSS lint checks passed after fixes, but formatting differences caused
-  the job to fail. Formatter patch has been applied; a clean rerun is required.
-- Candidate remains unapproved for deployment until all checks and page validation pass.
-- No live endpoint probing, production database queries or production modifications.
+## Remaining before production installation
 
-## Proposed test environment (approval required before provisioning here)
+- Full Horizon pages on desktop/mobile, including actual placement and long addresses.
+- English/Chinese page rendering and primary email confirmation/promotion through UI.
+- Many-author topic SQL query counts and deployment-specific cache headers/isolation.
+- Confirm live registration, email-domain and anonymous-mode settings separately.
+- Review pinned production installation, backup and rollback procedure with owner.
 
-Prefer a separate disposable development machine/CI runner with the pinned Discourse
-checkout, Ruby/Bundler, Node/pnpm, PostgreSQL, Redis and Chromium. Use synthetic test
-accounts and databases only. Allow about 4 CPU cores, 8 GB RAM and 15 GB free disk
-as planning capacity, then measure actual usage. Run focused tests serially.
-The production host has about 4 GB RAM, so do not start this stack there by default.
+## Environment boundaries
 
-Run the README commands, type checks including type-tests/model-fields-test.ts, then
-Horizon desktop/mobile checks and SQL query-count checks. Verify cookies vs both key
-types at HTTP boundaries, primary email confirmation/promotion, private topics, cache
-isolation and translations. Fix failures before marking this candidate deployable.
+No production container writes, database queries, package installation, rebuilds,
+restarts, SSH changes or root-access changes were performed. Host development files
+remain under `/home/codex/gtiit-primary-email-dev`. Ruby/Bundler/Node/pnpm and test
+services ran only on disposable GitHub-hosted runners with synthetic test data.
+
+Local and GitHub commit IDs differ because GitHub was initialized and uploaded
+through the connected GitHub API. The tested source is identified above. Subsequent
+documentation-only updates do not change that tested implementation.
+
+## Suggested interactive validation environment
+
+Use CNB or another disposable development environment at the pinned source revision.
+Plan around 4 CPU cores, 8 GB RAM and 15 GB free disk, then measure actual usage.
+Provisioning and platform access have not been configured yet. Do not copy production
+credentials, accounts or databases into it. The production host has about 4 GB RAM;
+do not start a second development stack there by default.

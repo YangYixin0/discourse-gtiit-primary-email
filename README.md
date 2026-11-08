@@ -1,8 +1,10 @@
 # GTIIT primary email
 
 Discourse plugin targeting `444e62cc26e96c7da97f08fa45df219f03f60114`
-(2026.11.0-latest), Horizon theme. Version 0.1.0 is a development candidate;
-Rails, browser and lint checks must pass before deployment.
+(2026.11.0-latest), Horizon theme. Version 0.1.0 is a development candidate.
+Backend tests, Chromium component tests, types and lint passed in isolated CI;
+full Horizon page/mobile validation and production approval remain outstanding.
+See VALIDATION.md for the exact tested commit and run.
 
 ## Behavior
 
