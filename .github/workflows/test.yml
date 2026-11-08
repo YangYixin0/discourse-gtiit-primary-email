@@ -56,7 +56,9 @@ jobs:
           bundle config --local deployment true
           bundle config --local without development
           bundle install --jobs 2
-          pnpm install --frozen-lockfile
+          # Register the external plugin as a workspace only in this CI checkout.
+          ruby -ryaml -e 'p="pnpm-workspace.yaml"; y=YAML.load_file(p); y["packages"] << "plugins/discourse-gtiit-primary-email"; File.write(p, y.to_yaml)'
+          pnpm install --no-frozen-lockfile
       - name: Prepare isolated test database and assets
         run: |
           bin/rake db:create db:migrate

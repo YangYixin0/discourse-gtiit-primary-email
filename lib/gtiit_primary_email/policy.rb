@@ -22,7 +22,7 @@ module GtiitPrimaryEmail
 
     def self.post?(guardian, post)
       member?(guardian) && post.user && post.user.id.positive? && !post.user.staged? &&
-        guardian.can_see_post?(post) && guardian.can_see_topic?(post.topic)
+        guardian.can_see_post?(post) && guardian.can_see_post_topic?(post)
     end
   end
 end
