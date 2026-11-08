@@ -12,6 +12,8 @@ module("Integration | Component | GTIIT primary email", function (hooks) {
     await render(<template><PrimaryEmail @email={{email}} /></template>);
 
     assert.dom(".gtiit-primary-email__address").hasText(email);
+    assert.dom(".gtiit-primary-email").hasText(email);
+    assert.dom(".gtiit-primary-email").hasAttribute("aria-label", "Primary email");
     assert.dom(".gtiit-primary-email img").doesNotExist();
   });
 

@@ -1,0 +1,1405 @@
+[
+  {
+    "name": "session alice",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "session bob",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "isolation 0 alice /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache alice /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 alice /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "private cache alice /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 alice /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 20,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "posted",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "last_read_post_number",
+        "last_read_post_id",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "pending_posts",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache alice /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 anonymous /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 anonymous /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 anonymous /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 bob /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache bob /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 bob /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "private cache bob /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 0 bob /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 20,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "posted",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "last_read_post_number",
+        "last_read_post_id",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "pending_posts",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache bob /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 alice /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache alice /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 alice /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "private cache alice /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 alice /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 20,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "posted",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "last_read_post_number",
+        "last_read_post_id",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "pending_posts",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache alice /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 anonymous /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 anonymous /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 anonymous /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 bob /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache bob /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 bob /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "private cache bob /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 1 bob /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 20,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "posted",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "last_read_post_number",
+        "last_read_post_id",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "pending_posts",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache bob /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 alice /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache alice /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 alice /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "private cache alice /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 alice /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 20,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "posted",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "last_read_post_number",
+        "last_read_post_id",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "pending_posts",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache alice /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded alice /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 anonymous /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 anonymous /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 anonymous /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 0,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "secondary excluded anonymous /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 bob /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache bob /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /u/alice.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 bob /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 1,
+      "keys": [
+        "user_badges",
+        "badges",
+        "badge_types",
+        "users",
+        "user"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": 1,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": "Accept, X-Requested-With"
+    }
+  },
+  {
+    "name": "private cache bob /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /u/alice/card.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "isolation 2 bob /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200,
+      "field_count": 20,
+      "keys": [
+        "post_stream",
+        "timeline_lookup",
+        "tags",
+        "tags_descriptions",
+        "fancy_title",
+        "id",
+        "title",
+        "posts_count",
+        "created_at",
+        "views",
+        "reply_count",
+        "like_count",
+        "last_posted_at",
+        "visible",
+        "closed",
+        "archived",
+        "has_summary",
+        "archetype",
+        "slug",
+        "category_id",
+        "word_count",
+        "deleted_at",
+        "user_id",
+        "featured_link",
+        "pinned_globally",
+        "pinned_at",
+        "pinned_until",
+        "image_url",
+        "slow_mode_seconds",
+        "draft",
+        "draft_key",
+        "draft_sequence",
+        "posted",
+        "unpinned",
+        "pinned",
+        "current_post_number",
+        "highest_post_number",
+        "last_read_post_number",
+        "last_read_post_id",
+        "deleted_by",
+        "actions_summary",
+        "chunk_size",
+        "bookmarked",
+        "topic_timer",
+        "message_bus_last_id",
+        "participant_count",
+        "show_read_indicator",
+        "thumbnails",
+        "slow_mode_enabled_until",
+        "board_memberships",
+        "valid_reactions",
+        "has_accepted_answer",
+        "can_create_shared_issue",
+        "shared_issue_visible",
+        "can_vote",
+        "vote_count",
+        "user_voted",
+        "details",
+        "pending_posts",
+        "bookmarks"
+      ],
+      "non_json": null,
+      "prefix": null,
+      "user_id": null,
+      "cache_control": "no-store, must-revalidate, private, max-age=0",
+      "vary": null
+    }
+  },
+  {
+    "name": "private cache bob /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "secondary excluded bob /t/7.json",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "restricted topic 9 viewer 0",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "restricted topic 9 viewer 1",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "restricted topic 9 viewer 2",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "restricted topic 10 viewer 0",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "restricted topic 10 viewer 1",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "restricted topic 10 viewer 2",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "API 0 /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "API 0 /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "API 0 /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "API 0 restricted 9",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "API 0 restricted 10",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "API 1 /u/alice.json",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "API 1 /u/alice/card.json",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "API 1 /t/7.json",
+    "pass": true,
+    "detail": {
+      "status": 200
+    }
+  },
+  {
+    "name": "API 1 restricted 9",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "API 1 restricted 10",
+    "pass": true,
+    "detail": {
+      "status": 404
+    }
+  },
+  {
+    "name": "many author SQL enabled=false",
+    "pass": true,
+    "detail": {
+      "posts": 20,
+      "authors": 20,
+      "email_selects": 0,
+      "sql": []
+    }
+  },
+  {
+    "name": "many author SQL enabled=true",
+    "pass": true,
+    "detail": {
+      "posts": 20,
+      "authors": 20,
+      "email_selects": 1,
+      "sql": [
+        "SELECT \"user_emails\".* FROM \"user_emails\" WHERE \"user_emails\".\"primary\" = TRUE AND \"user_emails\".\"user_id\" IN (1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)"
+      ]
+    }
+  },
+  {
+    "name": "bounded primary email queries",
+    "pass": true,
+    "detail": {
+      "email_selects": 1
+    }
+  }
+]

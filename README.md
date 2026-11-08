@@ -2,15 +2,17 @@
 
 Discourse plugin targeting `444e62cc26e96c7da97f08fa45df219f03f60114`
 (2026.11.0-latest), Horizon theme. Version 0.1.0 is a development candidate.
-Backend tests, Chromium component tests, types and lint passed in isolated CI;
-full Horizon page/mobile validation and production approval remain outstanding.
+Backend tests, Chromium component tests, types and lint passed in isolated CI.
+Isolated CNB Horizon page/mobile, email-change and request-isolation acceptance is
+recorded in [validation/cnb/README.md](validation/cnb/README.md). Production approval remains outstanding.
 See VALIDATION.md for the exact tested commit and run.
 
 ## Behavior
 
 Enable `gtiit_primary_email_enabled` explicitly after installation. While enabled,
 members cannot opt out. User cards, profiles and post author metadata display
-`User#email` (the current primary email), with English and Simplified Chinese labels.
+`User#email` (the current primary email). The visible display contains only the
+address; its nonvisual accessibility label supports English and Simplified Chinese.
 No email is copied into posts, custom fields, or a new table. Reloading/requesting
 fresh data after a completed email change updates the display, including old posts.
 Previously downloaded pages and copies cannot be recalled.
@@ -63,10 +65,11 @@ Disabling cannot revoke addresses already viewed. Do not change SSH/root access.
 
 ## Current environment
 
-Development files only under `/home/codex/gtiit-primary-email-dev`.
-Production deployment checkout and container remain untouched. Host lacks Ruby,
-Bundler, Node and pnpm; no dependencies have been installed. See VALIDATION.md for
-actual checks and pending work.
+Current acceptance uses a dedicated CNB workspace at `/workspace/gtiit-validation`
+and an isolated Docker development/test container. Dependencies and synthetic
+databases were created only there. The Windows project retains the plugin source,
+reproduction scripts and evidence. Production remains untouched. See VALIDATION.md
+and the CNB report for checks and remaining production work.
 
 ## GitHub CI
 

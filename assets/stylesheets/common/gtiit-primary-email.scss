@@ -7,7 +7,16 @@
   color: var(--primary-medium);
 
   &__address {
+    min-width: 0;
     overflow-wrap: anywhere;
     unicode-bidi: isolate;
   }
+}
+
+.topic-meta-data .names > .gtiit-primary-email {
+  display: inline-flex;
+  flex-basis: 100%;
+  min-width: 0;
+  overflow: visible;
+  white-space: normal;
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "member before logout",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "logout request",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "anonymous fresh profile DOM",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "same browser anonymous JSON",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "anonymous topic DOM",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "same browser login as another member",
+    "pass": true,
+    "detail": [
+      {
+        "url": "/u/alice.json",
+        "status": 200,
+        "fields": 1,
+        "cache": "no-store, must-revalidate, private, max-age=0"
+      },
+      {
+        "url": "/u/alice/card.json",
+        "status": 200,
+        "fields": 1,
+        "cache": "no-store, must-revalidate, private, max-age=0"
+      },
+      {
+        "url": "/t/7.json",
+        "status": 200,
+        "fields": 20,
+        "cache": "no-store, must-revalidate, private, max-age=0"
+      }
+    ]
+  },
+  {
+    "name": "second member updated old post",
+    "pass": true,
+    "detail": {}
+  }
+]

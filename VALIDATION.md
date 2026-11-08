@@ -26,6 +26,22 @@ plugin validation, not a complete Discourse regression suite or external audit.
 - Confirm live registration, email-domain and anonymous-mode settings separately.
 - Review pinned production installation, backup and rollback procedure with owner.
 
+## Isolated CNB page acceptance — 2026-11-09
+
+See [the reproducible CNB report](validation/cnb/README.md) and its structured results
+and screenshots. Desktop/mobile emulation, both languages, all three display
+locations, long addresses, real two-stage email confirmation, old-post refresh,
+anonymous/API exclusions, private-topic access and session isolation were checked.
+Twenty authors' primary emails loaded in one bulk SQL query. A post-author
+long-address truncation was fixed with scoped CSS. At the owner's request, the
+three locations now show only the address, with a translated nonvisual label.
+The updated Chromium component tests passed (2 tests, 0 failures), and the changed
+frontend files passed upstream Prettier, ESLint and Stylelint checks.
+
+These isolated checks cover the first three remaining items above for this test
+stack. Physical-device checks and production proxy/cache behavior were not tested.
+Production settings, installation approval and deployment remain outstanding.
+
 ## Environment boundaries
 
 No production container writes, database queries, package installation, rebuilds,

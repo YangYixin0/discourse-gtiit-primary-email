@@ -1,0 +1,77 @@
+[
+  {
+    "name": "email-before-confirmation old post",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "email-before-confirmation serialization",
+    "pass": true,
+    "detail": {
+      "profile": "alice@example.test",
+      "card": "alice@example.test",
+      "post": "alice@example.test",
+      "all": false
+    }
+  },
+  {
+    "name": "email-pending-old-confirmation old post",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "email-pending-old-confirmation serialization",
+    "pass": true,
+    "detail": {
+      "profile": "alice@example.test",
+      "card": "alice@example.test",
+      "post": "alice@example.test",
+      "all": false
+    }
+  },
+  {
+    "name": "email-pending-new-confirmation old post",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "email-pending-new-confirmation serialization",
+    "pass": true,
+    "detail": {
+      "profile": "alice@example.test",
+      "card": "alice@example.test",
+      "post": "alice@example.test",
+      "all": false
+    }
+  },
+  {
+    "name": "email-after-confirmation old post",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "email-after-confirmation serialization",
+    "pass": true,
+    "detail": {
+      "profile": "alice.changed@example.test",
+      "card": "alice.changed@example.test",
+      "post": "alice.changed@example.test",
+      "all": false
+    }
+  },
+  {
+    "name": "two-stage UI mail confirmation complete",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "fresh full profile updated",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "fresh user card updated",
+    "pass": true,
+    "detail": {}
+  }
+]

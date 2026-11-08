@@ -1,0 +1,28 @@
+Rails server is warmed up
+
+Running tests against Rails on localhost:4566
+  Load plugins: true
+
+[assemble_ember_build] Reusing existing core ember build. All done.
+Compiling 48 plugins...
+Finished initial compilation of plugins in 1.12s
+Randomizing tests with seed: j8OLpftZ
+# Launcher: Chrome 157.0
+ok 1 [54 ms] - discourse-gtiit-primary-email - Browser Id 1 - Integration | Component | GTIIT primary email: omits the display when the server withheld the field
+ok 2 [54 ms] - discourse-gtiit-primary-email - Browser Id 1 - Integration | Component | GTIIT primary email: renders the address as escaped text
+info Browser 1 exiting. [ # of modules in current module queue 0 ]
+Out of requested 1 browser(s), 1 browser(s) was launched & completed.
+All browsers to exited.
+
+1..2
+# tests 2
+# pass  2
+# skip  0
+# todo  0
+# fail  0
+
+# ok
+
+[Deprecation Counter] No deprecations logged
+
+TARGETED_CHECKS_COMPLETE

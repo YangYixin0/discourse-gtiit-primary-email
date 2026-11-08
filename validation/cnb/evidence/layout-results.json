@@ -1,0 +1,434 @@
+[
+  {
+    "name": "desktop-en-profile",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 565.359375,
+      "y": 221.71875,
+      "width": 127.8125,
+      "height": 19.484375,
+      "top": 221.71875,
+      "right": 693.171875,
+      "bottom": 241.203125,
+      "left": 565.359375
+    },
+    "clientWidth": 128,
+    "scrollWidth": 128,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-en-post",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 484.296875,
+      "y": 187.984375,
+      "width": 609.328125,
+      "height": 22.390625,
+      "top": 187.984375,
+      "right": 1093.625,
+      "bottom": 210.375,
+      "left": 484.296875
+    },
+    "clientWidth": 609,
+    "scrollWidth": 609,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-en-card",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 549.359375,
+      "y": 314.4375,
+      "width": 296,
+      "height": 19.484375,
+      "top": 314.4375,
+      "right": 845.359375,
+      "bottom": 333.921875,
+      "left": 549.359375
+    },
+    "clientWidth": 296,
+    "scrollWidth": 296,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-en-long-profile",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 565.359375,
+      "y": 167.328125,
+      "width": 438.21875,
+      "height": 19.484375,
+      "top": 167.328125,
+      "right": 1003.578125,
+      "bottom": 186.8125,
+      "left": 565.359375
+    },
+    "clientWidth": 438,
+    "scrollWidth": 438,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-en-long-post",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 505.609375,
+      "y": 102.625,
+      "width": 588.015625,
+      "height": 22.390625,
+      "top": 102.625,
+      "right": 1093.625,
+      "bottom": 125.015625,
+      "left": 505.609375
+    },
+    "clientWidth": 588,
+    "scrollWidth": 588,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-en-long-card",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 549.359375,
+      "y": 229.078125,
+      "width": 296,
+      "height": 38.96875,
+      "top": 229.078125,
+      "right": 845.359375,
+      "bottom": 268.046875,
+      "left": 549.359375
+    },
+    "clientWidth": 296,
+    "scrollWidth": 296,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-zh_CN-profile",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 565.359375,
+      "y": 221.71875,
+      "width": 127.8125,
+      "height": 19.484375,
+      "top": 221.71875,
+      "right": 693.171875,
+      "bottom": 241.203125,
+      "left": 565.359375
+    },
+    "clientWidth": 128,
+    "scrollWidth": 128,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-zh_CN-post",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 484.296875,
+      "y": 187.984375,
+      "width": 586.828125,
+      "height": 22.390625,
+      "top": 187.984375,
+      "right": 1071.125,
+      "bottom": 210.375,
+      "left": 484.296875
+    },
+    "clientWidth": 587,
+    "scrollWidth": 587,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-zh_CN-card",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 549.359375,
+      "y": 314.4375,
+      "width": 296,
+      "height": 19.484375,
+      "top": 314.4375,
+      "right": 845.359375,
+      "bottom": 333.921875,
+      "left": 549.359375
+    },
+    "clientWidth": 296,
+    "scrollWidth": 296,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-zh_CN-long-profile",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 565.359375,
+      "y": 167.328125,
+      "width": 438.21875,
+      "height": 19.484375,
+      "top": 167.328125,
+      "right": 1003.578125,
+      "bottom": 186.8125,
+      "left": 565.359375
+    },
+    "clientWidth": 438,
+    "scrollWidth": 438,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-zh_CN-long-post",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 505.609375,
+      "y": 102.625,
+      "width": 565.515625,
+      "height": 22.390625,
+      "top": 102.625,
+      "right": 1071.125,
+      "bottom": 125.015625,
+      "left": 505.609375
+    },
+    "clientWidth": 566,
+    "scrollWidth": 566,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "desktop-zh_CN-long-card",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 549.359375,
+      "y": 229.078125,
+      "width": 296,
+      "height": 38.96875,
+      "top": 229.078125,
+      "right": 845.359375,
+      "bottom": 268.046875,
+      "left": 549.359375
+    },
+    "clientWidth": 296,
+    "scrollWidth": 296,
+    "viewport": 1440,
+    "overflow": false
+  },
+  {
+    "name": "mobile-en-profile",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 26.71875,
+      "y": 408.109375,
+      "width": 127.8125,
+      "height": 19.484375,
+      "top": 408.109375,
+      "right": 154.53125,
+      "bottom": 427.59375,
+      "left": 26.71875
+    },
+    "clientWidth": 128,
+    "scrollWidth": 128,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-en-post",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 66.71875,
+      "y": 273.125,
+      "width": 279.6875,
+      "height": 16.703125,
+      "top": 273.125,
+      "right": 346.40625,
+      "bottom": 289.828125,
+      "left": 66.71875
+    },
+    "clientWidth": 280,
+    "scrollWidth": 280,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-en-card",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 174,
+      "y": 121.484375,
+      "width": 190,
+      "height": 19.484375,
+      "top": 121.484375,
+      "right": 364,
+      "bottom": 140.96875,
+      "left": 174
+    },
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-en-long-profile",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 26.71875,
+      "y": 331.328125,
+      "width": 336.5625,
+      "height": 38.96875,
+      "top": 331.328125,
+      "right": 363.28125,
+      "bottom": 370.296875,
+      "left": 26.71875
+    },
+    "clientWidth": 337,
+    "scrollWidth": 337,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-en-long-post",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 66.71875,
+      "y": 140.0625,
+      "width": 279.6875,
+      "height": 33.40625,
+      "top": 140.0625,
+      "right": 346.40625,
+      "bottom": 173.46875,
+      "left": 66.71875
+    },
+    "clientWidth": 280,
+    "scrollWidth": 280,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-en-long-card",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 174,
+      "y": 121.484375,
+      "width": 190,
+      "height": 58.453125,
+      "top": 121.484375,
+      "right": 364,
+      "bottom": 179.9375,
+      "left": 174
+    },
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-zh_CN-profile",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 26.71875,
+      "y": 408.109375,
+      "width": 127.8125,
+      "height": 19.484375,
+      "top": 408.109375,
+      "right": 154.53125,
+      "bottom": 427.59375,
+      "left": 26.71875
+    },
+    "clientWidth": 128,
+    "scrollWidth": 128,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-zh_CN-post",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 66.71875,
+      "y": 255.046875,
+      "width": 260.125,
+      "height": 16.703125,
+      "top": 255.046875,
+      "right": 326.84375,
+      "bottom": 271.75,
+      "left": 66.71875
+    },
+    "clientWidth": 260,
+    "scrollWidth": 260,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-zh_CN-card",
+    "text": "\n    alice@example.test\n  ",
+    "box": {
+      "x": 174,
+      "y": 121.484375,
+      "width": 190,
+      "height": 19.484375,
+      "top": 121.484375,
+      "right": 364,
+      "bottom": 140.96875,
+      "left": 174
+    },
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-zh_CN-long-profile",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 26.71875,
+      "y": 331.328125,
+      "width": 336.5625,
+      "height": 38.96875,
+      "top": 331.328125,
+      "right": 363.28125,
+      "bottom": 370.296875,
+      "left": 26.71875
+    },
+    "clientWidth": 337,
+    "scrollWidth": 337,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-zh_CN-long-post",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 66.71875,
+      "y": 139.984375,
+      "width": 260.125,
+      "height": 33.40625,
+      "top": 139.984375,
+      "right": 326.84375,
+      "bottom": 173.390625,
+      "left": 66.71875
+    },
+    "clientWidth": 260,
+    "scrollWidth": 260,
+    "viewport": 390,
+    "overflow": false
+  },
+  {
+    "name": "mobile-zh_CN-long-card",
+    "text": "\n    long.primary.address.for.mobile.wrapping.validation@example.test\n  ",
+    "box": {
+      "x": 174,
+      "y": 121.484375,
+      "width": 190,
+      "height": 58.453125,
+      "top": 121.484375,
+      "right": 364,
+      "bottom": 179.9375,
+      "left": 174
+    },
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "viewport": 390,
+    "overflow": false
+  }
+]
