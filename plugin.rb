@@ -29,7 +29,9 @@ after_initialize do
 
     ActiveRecord::Associations::Preloader.new(
       records: topic_view.posts.to_a,
-      associations: { user: :primary_email },
+      associations: {
+        user: :primary_email,
+      },
     ).call
   end
 end

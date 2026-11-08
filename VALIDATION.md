@@ -12,8 +12,13 @@
 ## Not passed / not run
 
 - Required `bin/lint --fix` attempted: exits 127 because Ruby is not installed.
-- RSpec, QUnit, TypeScript and browser tests NOT RUN; dependencies are unavailable.
-- Tests are written but unverified; static review does not establish runtime correctness.
+- GitHub CI now runs on disposable hosted runners; no host dependencies installed.
+- Run 42508018624: QUnit component tests and plugin/core type build passed.
+- Backend: 17 examples, 3 failures due to a private Guardian method call. Fixed
+  locally using public interfaces; a new run must confirm the fix.
+- Ruby/JS/CSS lint checks passed after fixes, but formatting differences caused
+  the job to fail. Formatter patch has been applied; a clean rerun is required.
+- Candidate remains unapproved for deployment until all checks and page validation pass.
 - No live endpoint probing, production database queries or production modifications.
 
 ## Proposed test environment (approval required before provisioning here)

@@ -22,8 +22,11 @@ module GtiitPrimaryEmail
     end
 
     def self.post?(guardian, post)
-      member?(guardian) && post.user && post.user.id.positive? && !post.user.staged? &&
-        guardian.can_see_post?(post) && guardian.can_see_post_topic?(post)
+      return false unless member?(guardian)
+      return false unless post.user && post.user.id.positive? && !post.user.staged?
+      return false if guardian.is_admin? && !guardian.can_see_topic?(post.topic)
+
+      guardian.can_see_post?(post)
     end
   end
 end

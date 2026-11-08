@@ -16,7 +16,9 @@ RSpec.describe TopicsController do
 
       expect(response.status).to eq(200)
       posts = response.parsed_body.dig("post_stream", "posts")
-      expect(posts.find { |entry| entry["id"] == post.id }["gtiit_primary_email"]).to eq(post.user.email)
+      expect(posts.find { |entry| entry["id"] == post.id }["gtiit_primary_email"]).to eq(
+        post.user.email,
+      )
     end
 
     it "omits the field from an anonymous post stream" do
@@ -25,9 +27,10 @@ RSpec.describe TopicsController do
       get "/t/#{post.topic_id}.json"
 
       expect(response.status).to eq(200)
-      response.parsed_body.dig("post_stream", "posts").each do |entry|
-        expect(entry).not_to have_key("gtiit_primary_email")
-      end
+      response
+        .parsed_body
+        .dig("post_stream", "posts")
+        .each { |entry| expect(entry).not_to have_key("gtiit_primary_email") }
       expect(response.body).not_to include(post.user.email)
     end
 

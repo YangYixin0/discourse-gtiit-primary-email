@@ -1,7 +1,7 @@
+import "../assets/javascripts/discourse/model-types.ts";
 import { expectTypeOf } from "expect-type";
 import type Post from "discourse/models/post";
 import type User from "discourse/models/user";
-import "../assets/javascripts/discourse/model-types";
 
 declare const post: Post;
 declare const user: User;

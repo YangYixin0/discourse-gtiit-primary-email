@@ -67,5 +67,4 @@ RSpec.describe UsersController do
       expect(response.parsed_body.dig("user", "gtiit_primary_email")).to eq(author.email)
     end
   end
-
 end
