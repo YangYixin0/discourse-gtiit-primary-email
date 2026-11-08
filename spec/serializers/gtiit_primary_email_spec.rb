@@ -2,9 +2,9 @@
 
 require "rails_helper"
 
-RSpec.describe "GTIIT primary email serialization" do
-  fab!(:viewer) { Fabricate(:user, trust_level: 2) }
-  fab!(:author) { Fabricate(:user, trust_level: 2) }
+RSpec.describe GtiitPrimaryEmail::Policy do
+  fab!(:viewer) { Fabricate(:user, trust_level: 2, approved: true) }
+  fab!(:author) { Fabricate(:user, trust_level: 2, approved: true) }
   fab!(:post) { Fabricate(:post, user: author) }
 
   before { SiteSetting.gtiit_primary_email_enabled = true }
@@ -58,6 +58,7 @@ RSpec.describe "GTIIT primary email serialization" do
   end
 
   it "omits the field for inactive, unapproved and suspended viewers" do
+    SiteSetting.must_approve_users = true
     [
       Fabricate(:user, active: false),
       Fabricate(:user, approved: false),

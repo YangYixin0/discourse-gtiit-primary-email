@@ -41,6 +41,7 @@ RSpec.describe UsersController do
     it "omits the field for a valid read-scoped user API key" do
       client = Fabricate(:user_api_key_client, scopes: ["read"])
       key = Fabricate(:user_api_key, user: viewer, client: client)
+      key.scopes.create!(name: "read")
 
       get "/u/#{author.username}.json", headers: { "User-Api-Key" => key.key }
 

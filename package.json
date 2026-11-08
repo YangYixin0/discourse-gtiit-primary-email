@@ -2,5 +2,8 @@
   "private": true,
   "dependencies": {
     "discourse": "workspace:@discourse/types@*"
+  },
+  "devDependencies": {
+    "expect-type": "^1.4.0"
   }
 }

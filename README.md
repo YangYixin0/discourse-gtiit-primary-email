@@ -14,7 +14,7 @@ fresh data after a completed email change updates the display, including old pos
 Previously downloaded pages and copies cannot be recalled.
 
 The plugin adds `gtiit_primary_email` only to user card/profile and post serializers.
-A real request and an active, approved, non-staged, non-suspended member are required.
+A real request and an active, non-staged, non-suspended member (also approved when site approval is required) are required.
 API key and User API key requests receive no plugin field. Existing profile and
 topic/post visibility rules apply. System users and staged authors are omitted.
 Anonymous/background serializers fail closed. No custom API route is introduced.
@@ -34,7 +34,8 @@ Do not execute test commands inside the production container or against producti
 ```sh
 LOAD_PLUGINS=1 bin/rspec plugins/discourse-gtiit-primary-email/spec
 bin/qunit plugins/discourse-gtiit-primary-email/test/javascripts
-bin/lint --fix plugins/discourse-gtiit-primary-email
+# The workflow invokes upstream linters from the Discourse root.
+# bin/lint treats external plugins as standalone packages; see test.yml.
 ```
 
 Manually verify Horizon desktop/mobile user cards, full profiles, topic pages,

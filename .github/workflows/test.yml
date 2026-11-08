@@ -70,11 +70,17 @@ jobs:
         run: bin/qunit --standalone --target discourse-gtiit-primary-email
       - name: Check plugin types
         if: ${{ !cancelled() }}
-        run: pnpm exec tsc --build plugins/discourse-gtiit-primary-email/tsconfig.json
+        run: pnpm exec tsc --build --runExternalCode plugins/discourse-gtiit-primary-email/tsconfig.json
       - name: Lint plugin and report formatting fixes
         if: ${{ !cancelled() }}
         run: |
-          bin/lint --fix plugins/discourse-gtiit-primary-email
+          trap 'git -C plugins/discourse-gtiit-primary-email diff' EXIT
+          mapfile -t ruby_files < <(git -C plugins/discourse-gtiit-primary-email ls-files '*.rb' | sed 's|^|plugins/discourse-gtiit-primary-email/|')
+          bundle exec stree write "${ruby_files[@]}"
+          bundle exec rubocop --autocorrect "${ruby_files[@]}"
+          pnpm exec prettier --write 'plugins/discourse-gtiit-primary-email/**/*.{gjs,ts,scss,json,yml,md}'
+          pnpm exec eslint --fix 'plugins/discourse-gtiit-primary-email/**/*.{gjs,ts}'
+          pnpm exec stylelint --fix 'plugins/discourse-gtiit-primary-email/**/*.scss'
           git -C plugins/discourse-gtiit-primary-email diff --exit-code
       - name: Save test logs and formatting patch
         if: ${{ !cancelled() }}

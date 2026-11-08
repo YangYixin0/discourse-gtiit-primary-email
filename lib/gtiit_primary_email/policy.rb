@@ -6,7 +6,8 @@ module GtiitPrimaryEmail
       request = guardian&.request
       user = guardian&.user
       return false unless request && guardian.authenticated? && user.id.positive?
-      return false unless user.active? && user.approved? && !user.staged? && !user.suspended?
+      return false unless user.active? && !user.staged? && !user.suspended?
+      return false if SiteSetting.must_approve_users? && !user.approved?
 
       env = request.env
       return false if env[Auth::DefaultCurrentUserProvider::API_KEY_ENV]
